@@ -1,0 +1,18 @@
+# Default variables for https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/blob/main/ai-ml/llm-serving-gemma/vllm/vllm-1_1-2b.yaml
+
+container:
+    image: us-docker.pkg.dev/vertex-ai/vertex-vision-model-garden-dockers/pytorch-vllm-serve:20240527_0916_RC00
+
+model:
+    family: gemma
+    id: google/gemma-1.1-2b-it
+    name: gemma-1.1-2b-it
+
+resources:
+    gpu: nvidia-l4
+    num_gpus: 1
+
+
+region_tag: gke_ai_ml_llm_serving_gemma_1_1_vllm_2b_deployment
+
+inference_server: vllm
